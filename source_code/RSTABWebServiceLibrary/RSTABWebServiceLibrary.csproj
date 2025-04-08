@@ -1,0 +1,60 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFrameworks>net5.0;net48;net6.0-windows</TargetFrameworks>
+    <Configurations>Debug;Release;Debug RFEM;Debug RSTAB;Release RFEM;Release RSTAB</Configurations>
+    <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
+    <Company>DlubalSoftware</Company>
+    <Authors>DlubalSoftware</Authors>
+    <Description>C# library for development of tools based on RSTAB WebService technology</Description>
+    <Copyright>Copyright © Dlubal Software</Copyright>
+    <PackageProjectUrl>https://dlubal-software.github.io/Dlubal_CSharp_Client/</PackageProjectUrl>
+    <PackageReadmeFile>README.md</PackageReadmeFile>
+    <RepositoryUrl>https://github.com/Dlubal-Software/Dlubal_CSharp_Client/</RepositoryUrl>
+    <RepositoryType>git</RepositoryType>
+    <NeutralLanguage>en</NeutralLanguage>
+    <AssemblyVersion>9.02.34</AssemblyVersion>
+    <FileVersion>9.02.34</FileVersion>
+    <Version>9.02.34</Version>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
+    <PackageRequireLicenseAcceptance>True</PackageRequireLicenseAcceptance>
+    <PackageId>Dlubal.$(AssemblyName)</PackageId>
+    <PackageIcon>rstab.png</PackageIcon>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Release RSTAB|net5.0|AnyCPU'">
+    <Optimize>True</Optimize>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Release RSTAB|net48|AnyCPU'">
+    <Optimize>True</Optimize>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Release RSTAB|net6.0-windows|AnyCPU'">
+    <Optimize>True</Optimize>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Include="..\..\README.md">
+      <Pack>True</Pack>
+      <PackagePath>\</PackagePath>
+    </None>
+    <None Include="..\img\rstab.png">
+      <Pack>True</Pack>
+      <PackagePath>\</PackagePath>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+		<PackageReference Include="System.ServiceModel.Http" Version="4.10.0" />
+		<PackageReference Include="System.ServiceModel.Primitives" Version="4.10.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="rstab.png">
+      <Pack>True</Pack>
+      <PackagePath>\</PackagePath>
+    </None>
+  </ItemGroup>
+
+</Project>
+
